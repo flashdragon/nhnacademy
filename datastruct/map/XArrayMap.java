@@ -15,7 +15,7 @@ public class XArrayMap<K, V> implements XMap<K, V> {
         size = 0;
     }
 
-    private class Entry<K, V> {
+    private static class Entry<K, V> {
         private K key;
         private V value;
         public Entry(K key, V value) {

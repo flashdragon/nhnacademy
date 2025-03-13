@@ -112,7 +112,7 @@ public class XArrays {
         }
         int[][] newArray = new int[source.length][];
         for (int i = 0; i < source.length; i++) {
-            newArray[i] = Arrays.copyOf(source[i], source[i].length);
+            newArray[i] = new int[source[i].length];
             for (int j = 0; j < source[i].length; j++) {
                 newArray[i][j] = source[i][j];
             }
@@ -125,7 +125,7 @@ public class XArrays {
         }
         T[][] newArray = (T[][]) Array.newInstance(source.getClass().getComponentType(), source.length);
         for (int i = 0; i < source.length; i++) {
-            newArray[i] = Arrays.copyOf(source[i], source[i].length);
+            newArray[i] = (T[]) Array.newInstance(source[i].getClass().getComponentType(), source[i].length);
             for (int j = 0; j < source[i].length; j++) {
                 newArray[i][j] = source[i][j];
             }
